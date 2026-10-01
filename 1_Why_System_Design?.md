@@ -1,0 +1,3 @@
+# WHY SYSTEM DESIGN?
+- We have created the simple projects. In which cleint is sendning request to server and server is doing some calculation and interact with Databse to manage data and finally return the response back to the client.
+- This approch is good for minimum prototype. But to build real world prorduct we nede to consider about system sclability, security, fault tollerance, throughput, latency and monitoring. And that's why we need system design to build secure, scalable, reilble systems.
