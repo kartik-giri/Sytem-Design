@@ -81,7 +81,7 @@ return blog;
 2. In redis data is stored in ram that's why retrieving the data from ram is much faster than retreiving the data from databse disk.
 
 3. In redis we store the data in the form of key - vlaue pair. The key is always string but value can be of any data type like string, set, sorted set, list, hash, streams etc. 
-- Redis's basic data values are binary-safe strings (byte sequences), and Redis builds higher-level data structures from them. However, some structures also have non-string metadata such as scores and stream IDs.
+- Redis's basic data values are binary-safe strings (byte sequences), and Redis builds higher-level data structures from them. However, some structures also have non-string metadata such as scores and stream IDs
 
 Thre redis dataypes are :
 1. String: In this value is string. we can store string as set user:1 "kartik"
