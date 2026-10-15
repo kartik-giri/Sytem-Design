@@ -10,7 +10,7 @@
 - SO the Solution is async programming. In async programming the next instrcution doesn't wait for the complete execution of previous instrcution. Means it doesn't block the execution and the next instrcutions continue exeucting before the complete the execution of previous instrcution/task.  
 - so design wil become like this. server can push user in queue and consumer/worker can pick the job and send the email using email service.
 
-2. The queue is the data structure which follows the fifo approch. But if there are mulitple servers followingFIFO approch in muli worker apporch can make disprencies and to solve that we use KAFKA.
+2. The queue is the data structure which follows the fifo approch. But if there are mulitple servers followingFIFO approch in muli worker apporch can make data disprencies and to solve that we use KAFKA.
 - In queue there 2 architecure 
 1. Push architecure- In this the producer push the job in queue and the message broker pushes the job to the register worker to execute it.for eg RabbitMQ
 ![BullMQ](./img/BullMQ.png)
@@ -24,3 +24,10 @@
 1. Producer: Creates and publishes messages/jobs.
 2. Message broker/queue: Accepts and stores messages until they are delivered or consumed according to its guarantees.
 3. Consumer/worker: Receives messages and performs the required task.
+
+# What is message stream?
+1. The message stream is used when we want muliple types of consumers to process our data. In message queue the data is being deleted after processing by worker. But in message stream data can be processed by multiple types of consumers for example caption generator consumer, thumbnail generator consumer.
+
+- Queue: “Here is a job. Someone needs to process it.”
+
+- Stream: “Here is an event that happened. Multiple independent consumers can read it, and potentially replay it later.”
