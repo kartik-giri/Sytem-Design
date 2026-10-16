@@ -7,6 +7,7 @@
 - This sync approch will work only till users are low in number. once the users becomes large this approch will make system slow and email delivery become very slow.
 ![Sync](./img/SyncArch.png)
 ![Sync](./img/Sync2.png)
+![SyncAPI](./img/SyncAPI.png)
 - SO the Solution is async programming. In async programming the next instrcution doesn't wait for the complete execution of previous instrcution. Means it doesn't block the execution and the next instrcutions continue exeucting before the complete the execution of previous instrcution/task.  
 - so design wil become like this. server can push user in queue and consumer/worker can pick the job and send the email using email service.
 
@@ -14,7 +15,7 @@
 - In queue there 2 architecure 
 1. Push architecure- In this the producer push the job in queue and the message broker pushes the job to the register worker to execute it.for eg RabbitMQ
 ![BullMQ](./img/BullMQ.png)
-2. Pull architecure- In this producer push the job and workers keep pulling/checking the message broker if there is job to do. In pull architecure we need to deel with defuplication. Exmaple aws SQS queue 
+2. Pull architecure- In this producer push the job and workers keep pulling/checking the message broker if there is job to do. In pull architecure we need to deal with defuplication. Exmaple aws SQS queue 
 - BullMQ uses a pull-based approach from the worker's perspective
 
 # What is a Message Queue?
@@ -25,7 +26,7 @@
 2. Message broker/queue: Accepts and stores messages until they are delivered or consumed according to its guarantees.
 3. Consumer/worker: Receives messages and performs the required task.
 
-# What is message stream?
+# What is message/Events stream?
 1. The message stream is used when we want muliple types of consumers to process our data. In message queue the data is being deleted after processing by worker. But in message stream data can be processed by multiple types of consumers for example caption generator consumer, thumbnail generator consumer.
 
 - Queue: “Here is a job. Someone needs to process it.”
