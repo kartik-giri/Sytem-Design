@@ -1,5 +1,5 @@
 # What is distributed system?
-- The distrbuted system is the system in which muliple independent computer are coneected to each other and comunicate with each other over a single netwrok to complete a certain task.
+- The distrbuted system is the system in which muliple independent computer are coneected to each other and comunicate with each other over a single netwrok to complete a certain task or to provide a certain service.
 - The distributed system distrbutes the computation, data or both in certain cases.
 - If we want to distribute database. There are 2 ways Replicating and SHarding.
 - Replication: In this we replicate the databse copy to the difference node. so load can be transfer and managed efficiently.
@@ -10,7 +10,7 @@
 - CAP is made of 3 words.
 - C = Consistency, A= Availability, P = Partition Tolerance
 
-1. Consistency -> Means that users/nodes can store and read same data and same time.
+1. Consistency -> Means that users/nodes can store and read same data at the same time.
 2. Availability -> Means all the reqesut will be handled by the server even if it suceeds or fails.
 3. Partition Tolerance -> Means System works despite of connection failure between nodes.
 

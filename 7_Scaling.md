@@ -4,9 +4,11 @@
 # Veritcal scaling?
 - In vertical scaling the specs of the single machine is being increased for exmaple ram, cpu, storage etc. So that the single server can handle the  more load efficitently.
 - Vertical sclaing is used to scale sql db or state full application because it is hard and risky to  maintian the state in distbuted system.
+- In this we can not scale server to a certain extent.
+- Also the cost could increase 2x but the server capability can't it could increase only 20%.
 
 # Horizontal scaling?
-- Using vertical scaling we can scale server to a certain extent.
+- Using vertical scaling we can not scale server to a certain extent.
 - In horizontal scaling we add more machines in the server and distribute the load accordingly. so that load can be handled efficiently.
 - In horizontal sclaing we add load balancer. The client send the req to the load balancer and the load balancer route the request to the server which is less busier to handle the load management.
 

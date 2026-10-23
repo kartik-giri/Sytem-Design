@@ -1,11 +1,11 @@
 # What is back of the envelope estimation?
 - Back of the envelope estimation is used to estimate the amount of traffic, storage, Ram and computing power is needed to build the efficient and effective system.
 - Calculation we should know:
-1. 1 KB = 1000 bits = 10^3
-2. 1 MB = 1000000 bits = 10^6
-3. 1 GB = 1000000000 bits = 10^9
-4. 1 TB = 1000000000000 bits = 10^12
-5. 1 PB = 1000000000000000 bits = 10^15
+1. 1 KB = 1000 bytes = 10^3
+2. 1 MB = 1000000 bytes = 10^6
+3. 1 GB = 1000000000 bytes = 10^9
+4. 1 TB = 1000000000000 bytes = 10^12
+5. 1 PB = 1000000000000000 bytes = 10^15
 
 - In this we take estimation to make our calculation easy.
 - Estimation we should made are:
