@@ -3,8 +3,8 @@
 - For example when client send request to server the server read the data from db and compute it on backend before returning to the user. Which in total takes 500ms.
 - But if we cache the data in cache than we can reduce the response time drastically like 50ms.
 
-- Caching meand storing the pre computed data in the faster accessible data store like redis to reduce the response time.
-- For example- in blog site with caching first user can ask for blog and backend will cache those blogs and for next req backend will return the blogs from the cache to reduce the response time. And when new blog are created we can do the cache invalidation like after 24 hours new cache will be stored and past cache will be removed.
+- Caching means storing the pre computed data in the faster accessible data store like redis to reduce the response time.
+- For example- in blog site with caching first user can ask for blog and backend will cache those blogs and for next req backend will return the blogs from the cache to reduce the response time. And when new blog are created we can do the cache invalidation like after 24 hours ttl new cache will be stored and past cache will be removed.
 
 - Benefits:-
 1. Reduce the latency.
@@ -90,3 +90,14 @@ Thre redis dataypes are :
 4. Hash: IN this we can store objects as value. Like HSET user:1 name "kartik" HSET user:1 id "23"
 5. Sorted set: In this we store the elements which have some weight or score. ZADD leaderboard 100 "Kartik"
 6. Streams: append-only sequence of events/messages.
+
+# Interview Byte 6
+- Cache got full what ru deleting from cache?
+- Ans Least recently used data.
+
+- What if 10,000 req missed the cache at same time what happens?
+- Allow one req to rebuild the cache wijile other waits.
+
+- How sync cache and db?
+- Use TTL where showing old data for some is tolerable.
+- Use Active invalidation where we can't afford showing old data.

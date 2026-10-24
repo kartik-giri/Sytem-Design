@@ -13,3 +13,5 @@
 - It does not necessarily mean each individual request will finish faster.
 
 3. Throughtput means number of req or unit of work, system can handle or process per second.
+
+- ![Req_Res_Cycle](./img/Res_Res.png)

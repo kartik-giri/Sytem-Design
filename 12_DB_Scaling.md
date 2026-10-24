@@ -3,7 +3,7 @@
 
 - Type os Big O Noation
 1. Big O(1) -> constant time. for example finding first element of arr.
-2. Big O(n) -> The amount of work done by algorithm grows linearly as input inxrease.
+2. Big O(n) -> The amount of work done by algorithm grows linearly as input increase.
 For example printing array elements.
 3. Big O(n^2) -> states that the time becomes quadratic for example nested loops.
 4. Big O(log n) -> O(log n) means the algorithm's work grows logarithmically as the input size increases, usually because the algorithm reduces the problem size by a constant factor (commonly half) at each step.
@@ -17,6 +17,7 @@ For example printing array elements.
 - But indexing allows the db to directly find the rows which is needed, which is more faster.
 - For indexing we need to make the particular column index and than the db will create the copy of index column in ds called B trees and store it. using the B tree data structure db can find specified row in time complexity of O(log n).
 - In postgress Primary key is already indexed but for to make any column index we just need to add single line in scheema or sql query and rest will be handled by the DB itself.
+- ![Indexing](./img/Indexing.png)
 
 # What is partioning?
 - Parititioning spilts the the whole table into smaller sub tables and which can be host on single server.
@@ -79,7 +80,7 @@ SELECT
 
 # What is sharding?
 - In sharding we first partition the db and than host the sub data set on the server which is called shard.
-- We can slit the data on the basis of range and the column which is used for shard is call sahrding key.
+- We can split the data on the basis of range and the column which is used for shard is call sahrding key.
 - In sharding we have to write the code to route request to the subsequent shard which is have that appropriate range of data.
 - The system needs a routing mechanism that maps the sharding key to the appropriate shard. This routing can be implemented in the application, a proxy/router, or handled by the database system.
 
