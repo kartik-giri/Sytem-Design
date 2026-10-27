@@ -67,8 +67,12 @@ ON "User_2026" ("email");
 
 # WHat is Master Slave Architecture/ Primary + Read Replicas?
 - Even after doing the indexing, partitioning and verticaly scaling of db. If the database is struggling because of high read traffic, we can use read replicas to distribute read load." and implement master slave approch.
-- In master slave acrhietecture we have have one db server which only perfom the write operations and have multiple slave db servers which only performs read operations. the data replicated from master node to slave nodes async or sync oon the basis of config.
+- In master slave acrhietecture we have have one db server which only perfom the write operations and have multiple slave db servers which only performs read operations. the data replicated from master node to slave nodes async or sync on the basis of config.
 - But what if master node goes down?? Than in that case we can promote the slave/standby node to primary node.
+- The replicas node take some ms to copy the data from primary node. SO that's why when Client ask for it's data we do read from primany node which is strict consistency and other users read from replicas which takes some ms to reflect changes which is eventual consistency.
+- In primay + read replicas the load bal sites between app and db server.
+- Backup server is serpate from server.
+![DB replicas](./img/DbReplicas.png)
 
 - The primary handles writes:
 INSERT
@@ -79,10 +83,11 @@ Replicas can handle reads:
 SELECT
 
 # What is sharding?
-- In sharding we first partition the db and than host the sub data set on the server which is called shard.
+- In sharding we first partition the large db in smaller data sets and than host the sub dataset on the server which is called shard.
 - We can split the data on the basis of range and the column which is used for shard is call sahrding key.
-- In sharding we have to write the code to route request to the subsequent shard which is have that appropriate range of data.
+- In sharding we have to write the code to route request to the subsequent shard which have that appropriate range of data.
 - The system needs a routing mechanism that maps the sharding key to the appropriate shard. This routing can be implemented in the application, a proxy/router, or handled by the database system.
+- Consistent hashing is important concept for this, to divide the shards.
 
 # Sum up of Database Scaling
 After you read the DB Scaling section, let us remember these rules:

@@ -5,7 +5,7 @@
 - In vertical scaling the specs of the single machine is being increased for exmaple ram, cpu, storage etc. So that the single server can handle the  more load efficitently.
 - Vertical sclaing is used to scale sql db or state full application because it is hard and risky to  maintian the state in distbuted system.
 - In this we can not scale server to a certain extent.
-- Also the cost could increase 2x but the server capability can't it could increase only 20%.
+- Also the cost could increase 2x but the server capability increase only 20%.
 
 # Horizontal scaling?
 - Using vertical scaling we can not scale server to a certain extent.
@@ -15,3 +15,12 @@
 - In horizontal scaling the applications should be stateless. Because if the server A stores the user session data and in 2nd req the load balancer route the request to server B than there will be no user session data.
 - Instead of keeping important session state inside Server A's memory, we can put shared state in something like Redis or a database.
 - This is one of the reasons horizontal scaling is much easier when your application layer is stateless.
+
+# Interview Byte 3
+- Your app is slow, why not just buy new server?
+- My answer- That we will start with bigger server because it is simple and buys us time because there is 0 code changes. 
+- But vertical scaling can't scale over certain extent and single point of failure.
+- Than we should use horizontal scaling.
+
+- %0 users internal tool use vertical scaling and app with lakhs of users we should use horizontal scaling.
+- And in most of the cases we end up using both scaling solution we use horizonatl and vertically scale indvidual node.

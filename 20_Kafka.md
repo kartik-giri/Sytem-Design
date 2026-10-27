@@ -1,15 +1,15 @@
 # What is Kafka?
 - Kakfka is used as message/event stream.
 - Apache Kafka is a distributed event-streaming platform. It stores events in topics, lets producers publish them, and lets consumers read and process them. Events can remain available for replay according to the topic's retention settings.
-- Kafka has high throughput but lesser storage than DB. we use kafka becuase db throughput is very low and if we large number of operation per second on db the db can go down. So that'w why we use kafka to do large number of operaion per second.
+- Kafka has high throughput but lesser storage than DB. we use kafka becuase db throughput is very low and if we do large number of operation per second on db the db can go down. So that'w why we use kafka to do large number of operaion per second.
 - In kafka data can be consumed by multiple types of consumers and data is not deleted after consumed my consumer.
 - The kafka have topic  where we push out data and topic data can be partitioned in to multiple partitions for parallelism. The one partition can be consumed by only one consumer where as one consumer can consume multiple partitons.
-- for example there are 4 partitons and 2 consumer gorups first group have 4 consumers and 2nd consumer group have 2 consumers.The 2st consumer group with 4 consumers eill get 1 partition each and 2nd consumer with 2 consumers will get 2 partions each.
+- for example there are 4 partitons and 2 consumer gorups first group have 4 consumers and 2nd consumer group have 2 consumers.The 1st consumer group with 4 consumers will get 1 partition each and 2nd consumer group with 2 consumers will get 2 partions each.
 - If there are more consumers in comsumer group than partitions than that extra consumer will sit idle.
 - The kafka does auto/self balancing for consumers and partitons.
 - The topic is just logical name like folder name and partion is the physical location where data is stored like files.
 - The consumer can produce the event too.
-- The multiple consumers from different consumers groups each can consume the same partition at the same time.
+- The consumer from different consumers groups can consume the same partition at the same time.
 - ![Offset Commit Straetegy](./img/OffsetCommitStrategy.png)
 - ![BackPressure](./img/BackPressure.png)
 
@@ -29,7 +29,7 @@ Suppose, for our sendNotification topic, we partition it based on location. Nort
 - Each partition is an ordered log, data is stored on disk. data is written sequentially.
 7. Consumer Groups: When we make a consumer that subscribes to a topic, we have to assign a group to the consumer. Each consumer within a group does one type of processing from a subset of partitions.
 Ex: For video processing, as we saw earlier, we can have two consumer groups. One consumer group is for video transcoding, and the other consumer group is for caption generating.
-In short the consumer group is the group of same type consumers.
+In short the consumer group is the group of same type of consumers.
 
 # Diff between kafka and message queue.
 1. Data stays in kafka after consumer has consumed or process it where as in message queue the data is being deleted after comsumer consumed it.
@@ -46,6 +46,8 @@ In short the consumer group is the group of same type consumers.
 # How consumers consume the data??
 - The consumers group pull the data from kafka broker.
 - Consumer uses polling.
+- It keeps polling or checking the topic partiton for event to process.
+- The consumer processes the records and typically commits offsets to track its progress.
 ![Consume](./img/Consume.png)
 
 # What if wronf data goes in kafka?
