@@ -60,4 +60,8 @@ Suppose Inkflow has 1 million shapes stored in PostgreSQL.
 
 - ![Data Model](./img/DataModel.png)
 
-# Choose sql if the data is structured means each entitiy will have same fields every time. And when we want relationship, txs etc. Use NOSQL when entitiy record can be different
+# Choose sql if the data is structured means each entitiy will have same fields every time. And when we want relationship, txs etc. Use NOSQL when entitiy record can be different from each other.
+
+# Interview byte 5
+- SQL or NOSQl
+- My answer should drevied from access patterns like if there is relationship and i am implementing join to show home feed than use sql.

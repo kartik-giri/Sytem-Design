@@ -8,7 +8,7 @@
 ![Sync](./img/SyncArch.png)
 ![Sync](./img/Sync2.png)
 ![SyncAPI](./img/SyncAPI.png)
-- SO the Solution is async programming. In async programming the next instrcution doesn't wait for the complete execution of previous instrcution. Means it doesn't block the execution and the next instrcutions continue exeucting before the complete the execution of previous instrcution/task.  
+- SO the Solution is async programming. In async programming the next instrcution doesn't wait for the complete execution of previous instrcution. Means it doesn't block the execution and the next instrcutions continue exeucting before the complete execution of previous instrcution/task.  
 - so design wil become like this. server can push user in queue and consumer/worker can pick the job and send the email using email service.
 
 2. The queue is the data structure which follows the fifo approch. But if there are mulitple servers followingFIFO approch in muli worker apporch can make data disprencies and to solve that we use KAFKA.

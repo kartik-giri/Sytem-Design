@@ -23,4 +23,4 @@
 - Than we should use horizontal scaling.
 
 - %0 users internal tool use vertical scaling and app with lakhs of users we should use horizontal scaling.
-- And in most of the cases we end up using both scaling solution we use horizonatl and vertically scale indvidual node.
+- And in most of the cases we end up using both scaling solution we use horizonatl and vertically to scale indvidual node.

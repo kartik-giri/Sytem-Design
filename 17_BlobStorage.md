@@ -14,7 +14,7 @@ diagram-123.png
 
 # Features
 1. It is much cheaper option for file storage.
-2. It provdes 11 nice durablity, becuase it prodivde redundency to the data.
+2. It provdes 11 nine durablity, becuase it prodivde redundency to the data.
 
 # presigned URLs:
 User

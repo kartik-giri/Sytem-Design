@@ -11,7 +11,7 @@
 4. Hash based algo -> this algo takes anything from user like client ip, user id etc as input and hash that to find the server. This ensures the same client is consistently is routed to the same server.
 
 - In this DNS resolves the domain name to the loadBalancer IP address.
-- Load Balancer server is calso called reverse proxy.
+- Load Balancer server is also called reverse proxy.
 - It also does the health check for each server by pinging the server after some seconds. if the server doesn't resp LB will not route the req to it.
 
 - ![LoadBalancer](./img/LoadBalancer.png)
@@ -44,3 +44,9 @@ For example, a server might store:
 
 - ![SharedStorage](./img/SharedStorage.png)
 - ![Stateless server Arch](./img/StatelessServerArch.png)
+
+# Interview Byte 4
+- Interviewer asks we scaled server from 2 to 5 and now users are getting loged out.
+- I'll say becuase eachs erver stores the session data indivdually in it's there own memory.
+- Thats why users req routed to different server from there log in server will loged out the user.
+- So the solution is to keep the user session data in shared storage.

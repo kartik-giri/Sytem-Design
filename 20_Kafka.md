@@ -50,7 +50,7 @@ In short the consumer group is the group of same type of consumers.
 - The consumer processes the records and typically commits offsets to track its progress.
 ![Consume](./img/Consume.png)
 
-# What if wronf data goes in kafka?
+# What if wrong data goes in kafka?
 - Kafka is the log file not the database.
 - In kafka we can peform only append operation ar the end of the file not update or delete operation.
 - We can;t perform crud operation on Kafka.
@@ -71,7 +71,7 @@ In short the consumer group is the group of same type of consumers.
 2. Gets the kafka metadata like topic, parititions, leader/follower brokers.
 3. Producer needs to deicide to which parittion event should be stored.
 4. Producer selects the parition like from key if it is present.
-5. Producer fnds the lead broker for that parition  and send the data to that broker.
+5. Producer finds the lead broker for that parition  and send the data to that broker.
 6. Leader broker stored that data.
 7. Followers brokers replicate the data from leader broker.
 8. Consuner get the metadata finds the leader brokers for that partiton and pull the data from that broker and maintan the offset.

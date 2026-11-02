@@ -7,7 +7,7 @@
 
 - If the video-upload service calls every downstream service synchronously and waits for their responses, it creates runtime dependencies between those services. This can increase latency, limit throughput, complicate scaling, and cause failures to cascade when a downstream service is unavailable.
 
-- EDA addresses this by allowing services to communicate through events.
+- EDA addresses solves this by allowing services to communicate through events.
 
 - For example, the video-upload service publishes a `VideoUploaded` event to a topic. Other interested services subscribe to that topic and process the event independently, without requiring the upload service to call each service directly.
 
@@ -18,4 +18,4 @@
 - EDA is used to decouple the services and make them more reliable.
 
 - Simple Event Notification : Only limited data is published by producer as event the consumers needs to query the db for more information about event.
-- Event-Carried State Transfer : More information about event is send by producer to EDA broker so consumers don't quer the db and make latency more low. 
+- Event-Carried State Transfer : More information about event is send by producer to EDA broker so consumers don't query the db and make latency more low. 

@@ -17,6 +17,6 @@
 # Interview Byte 1
 # Interviewer asks design instagram.
 - Always ask design HLD or LLD.
-- IF HLD say i can zoom in indvidual components later if we want.
+- IF HLD, say i can zoom in indvidual components later if we want.
 - IF he asks LLD than i should talk about classes, data strcutures no need to talk about servers.
 - Always ask for the altitude at which i should answer, Cause mismatch altitude cause loose interview.

@@ -18,7 +18,7 @@
 1. There are nodes A, B and C in the distrbuted system.
 2. Suppose a network partition happens and B losses its communication with node A and C.
 3. If we want to allow the users to send request to the system than in that case node B can't propogate it's changes to node A and C. And we acchieve Availability at the cost of Consistency.
-4. But if we want consistency in the data between nodes than in that case we make server unavailable and wait until node B cmmunication connection is being fixed. In this case we get consistency at the cost of Availability.
+4. But if we want consistency in the data between nodes than in that case we make server or node B unavailable and wait until node B cmmunication connection is being fixed. In this case we get consistency at the cost of Availability.
 
 - CP -> IS best for banking apps. where inconsitent data can be serious probem.
 - AP - IS best for social media apps. where inconsitency in data doesn't make serious problem

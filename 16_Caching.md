@@ -96,8 +96,8 @@ Thre redis dataypes are :
 - Ans Least recently used data.
 
 - What if 10,000 req missed the cache at same time what happens?
-- Allow one req to rebuild the cache wijile other waits.
+- Allow one req to rebuild the cache while other waits.
 
-- How sync cache and db?
-- Use TTL where showing old data for some is tolerable.
+- How to sync cache and db?
+- Use TTL where showing old data for some time is tolerable.
 - Use Active invalidation where we can't afford showing old data.
