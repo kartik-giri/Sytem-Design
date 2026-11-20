@@ -22,3 +22,7 @@
 - Also if we want to scale the microservice we can use loadbalancer in between api gateway and number of machines where micro service is hosted.
 ![APIGATEWAYWITHLOADBALANCER](/img/APIGAtewayWithLOadbalancer.png)
 
+- We can use load bal and api gate way together.
+- For example ther are multiple micro services servers and api gateway.
+- we can put load bal between microservices servers and the api gateway.
+
